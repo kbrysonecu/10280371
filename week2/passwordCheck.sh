@@ -1,12 +1,13 @@
-#!/bin/bash -x
+#!/bin/bash
 
-read -sp "Password: " pass_var
+read -sp "Password: " pass_var 
 #user enters password and hides input and stays on that line
-echo -cs "$pass_var" | sha256sum > val_a
-cat secret.txt > val_b
+
+echo "Password: $pass_var" | sha256sum > passwordcheck.txt 
+#create plain text password into txt 
 
 
-if [ "$val_a" = "$val_b" ]; then
+if cmp -s passwordcheck.txt secret.txt; then
     echo "Access granted."
     exit 0
 else
