@@ -6,5 +6,5 @@ read -p "Folder Name: " folder_var
 read -sp "Password: " pass_var 
 #user enters password and hides input and stays on that line
 
-echo "Password: $pass_var" | sha256sum > secret.txt 
+echo "Password: $pass_var" | sha256sum > ~/Student/Scripts/Portfolio/$folder_var/secret.txt 
 #create plain text password into txt 

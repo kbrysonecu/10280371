@@ -13,7 +13,7 @@ read -p "Select a value:
 #read user input selection
 
 case $userchoice in 
-    "1" ) echo 1. Folder Maker
+    "1") echo 1. Folder Maker
         ./foldermaker.sh ;;
 
     "2") echo 2. Folder Copier
